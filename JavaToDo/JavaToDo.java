@@ -13,51 +13,6 @@ enum completionStatus {
     INPROGRESS,
     COMING SOON
 }
-public class JavaToDo{
-    private String taskDescription;
-    private completionStatus completionStatus;
-
-        JavaToDo(String taskDescription, completionStatus completionStatus){
-            this.taskDescription = taskDescription;
-            this.completionStatus = completionStatus;
-        }
-
-        // Getters and Setters
-        public String getTaskDescription(){
-            return taskDescription;
-        }
-        public void setTaskDescription(String taskDescription){
-            this.taskDescription = taskDescription;
-        }
-        public completionStatus getCompletionStatus(){
-            return completionStatus;
-        }
-        public void setCompletionstatus(completionStatus completionStatus){
-            this.completionStatus = completionStatus;
-        }
-    public static void main(String[] args){
-
-        // To accept inputs we use scanner
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Here to plan!! Welcome");
-        System.out.println("Please enter your name:");
-
-        String userName = sc.nextLine();
-
-        // Create a to-do list object
-        JavaToDo JavaToDo = new JavaTodo(userName);
-
-        // We will use a switch case loop that is embeded in the do while loop.
-
-        do{
-
-        } while (){
-
-        }
-    }
-
-}
-
 public class ToDoManager {
 
     //Variables
@@ -73,7 +28,7 @@ public class ToDoManager {
         this.taskName = taskName;
         this.priorityIndex = priorityIndex;
         this.dueDate = dueDate;
-  }
+    }
 
 
     // Getters and Setters
@@ -102,7 +57,7 @@ public class ToDoManager {
 
     }
 
-     public String removeTask(String taskName){
+    public String removeTask(String taskName){
         System.out.println("Task: " + getTaskName)
     }
 
@@ -124,5 +79,103 @@ public class ToDoManager {
 
     }
 
+
+}
+
+public class JavaToDo{
+    private String taskDescription;
+    private completionStatus completionStatus;
+    private ToDoManager TodoManager;
+
+        JavaToDo(String taskDescription, completionStatus completionStatus, TodoManager TodoManager){
+            this.taskDescription = taskDescription;
+            this.completionStatus = completionStatus;
+            this.ToDoManager = new ToDoManager();
+        }
+
+        // Getters and Setters
+        public String getTaskDescription(){
+            return taskDescription;
+        }
+        public void setTaskDescription(String taskDescription){
+            this.taskDescription = taskDescription;
+        }
+        public completionStatus getCompletionStatus(){
+            return completionStatus;
+        }
+        public void setCompletionstatus(completionStatus completionStatus){
+            this.completionStatus = completionStatus;
+        }
+
+    public static void displayMenu(){
+            System.out.println("======PLAN YOUR DAY WELL!!=========");
+            System.out.println("1. Display all Tasks")
+            System.out.println("2. Add Task");
+            System.out.println("3. Remove Task");
+            System.out.println("4. Save Task")
+            System.out.println("5. Mark as Complete");
+            System.out.println("6. View Task");
+            System.out.println("7. List Tasks based on priority")
+
+    }
+    public static void main(String[] args){
+
+        // To accept inputs we use scanner
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Here to plan!! Welcome");
+        System.out.println("Please enter your name:");
+
+        String userName = sc.nextLine();
+
+        // Create a to-do list object
+        JavaToDo JavaToDo = new JavaTodo(userName);
+        int choice;
+
+        // We will use a switch case loop that is embeded in the do while loop.
+
+        do{
+            System.out.println("Please enter Option (1 - 7)");
+            choice = sc.nextInt();
+            sc.nextLine(); // Use the next line
+
+            switch(choice){
+                case 1:
+
+                    break;
+
+                case 2:
+
+                    break;
+
+
+                case 3:
+
+                    break;
+
+                case 4:
+
+
+                    break;
+
+
+                case 5:
+
+                    break;
+
+                case 6:
+
+                    break;
+
+                case 7:
+
+                    break;
+            }
+
+        } while (choice !=7){
+            System.out.println("Invalid number. Choose a number between 1 - 7");
+            sc.close;
+
+        }
+    }
 
 }
