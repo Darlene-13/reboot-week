@@ -42,7 +42,7 @@ public class JavaToDo{
         System.out.println("Here to plan!! Welcome");
         System.out.println("Please enter your name:");
 
-        String userName = sc.nextline();
+        String userName = sc.nextLine();
 
         // Create a to-do list object
         JavaToDo JavaToDo = new JavaTodo(userName);
@@ -50,7 +50,6 @@ public class JavaToDo{
         // We will use a switch case loop that is embeded in the do while loop.
 
         do{
-
 
         } while (){
 
